@@ -1,8 +1,6 @@
-//Imports
-import {testExport} from "../GameFiles/ScriptLoader.js";
-
 //Globals
 var input = document.getElementById("playerInput");
+var gameStarted = false;
 
 //Listeners
 input.addEventListener("keyup",
@@ -29,6 +27,11 @@ function CheckPlayerCommand(playerInputText) {
     case "!help":
     {
       responseText = GetCommandList();
+      break;
+    }
+    default:
+    {
+      responseText = HandleValidInput(playerInputText);
     }
   }
   return responseText;
@@ -55,12 +58,19 @@ function HandleInput()
   else if(playerInputText == "clear")
   {
     consoleTextObj.innerHTML = "";
-
     return;
   }
 
-  //Check if valid command
-  var responseText = CheckPlayerCommand(playerInputText);
-  consoleTextObj.innerHTML = currentConsoleText + "</br><p1>" + playerInputText + "</p1></br>" + responseText;
-  consoleObj.scrollTop = consoleObj.scrollHeight;
+  if(gameStarted)
+  {
+    //Check if valid command
+    var responseText = CheckPlayerCommand(playerInputText);
+    consoleTextObj.innerHTML = currentConsoleText + "</br><p1>" + playerInputText + "</p1></br>" + responseText;
+    consoleObj.scrollTop = consoleObj.scrollHeight;
+  }
+  else if(playerInputText == "!StartGame")
+  {
+    gameStarted = true;
+    consoleTextObj.innerHTML = GetIntroText();
+  }
 }

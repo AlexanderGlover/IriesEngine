@@ -3,23 +3,28 @@
 <head>
   <link rel="stylesheet" href="Stylesheets/Main.css">
   <title>Iries Engine</title>
+  <script src="GameFiles/Rooms.js"></script>
+  <script src="GameFiles/GameTextHandler.js"></script>
+  <script src="GameFiles/ObjectHandler.js"></script>
+  <script src="GameFiles/MoveHandler.js"></script>
+  <script src="GameFiles/LookHandler.js"></script>
+  <script src="GameFiles/InputHandler.js"></script>
 </head>
 <body>
   <div class="pageHeader">
-    <h1>Dungeon Crawl - Dev Mode</h1>
+    <h1>Fire Purifies - Dev Mode</h1>
   </div>
   <div class="mainBody">
     <div class="roomTitle">
       <center><p>"Now I am become death, the destroyer of worlds" - Oppenheimer</p></center>
     </div>
     <div class="textOutput" id="console">
-      <h5 id="consoleText">"Welcome to _Insert Title Here_. If this is your first time type !help for instructions. Otherwise, see you upsidedown.</br> Thanks for playing. Hope you enjoy!</br>-Alexander Glover"</br></h5>
+      <h5 id="consoleText">Welcome to <p2>Fire Purifies.</p2> If this is your first time type <p1>!help</p1> for instructions.</br> Thanks for playing. Hope you enjoy!</br>-Alexander Glover"</br></h5>
     </div>
     <div class="inputFooter">
       <input type="text" id="playerInput" placeholder="Input Command Here"></div>
   </div>
 
-  <script src="GameFiles/ScriptLoader.js"></script>
   <script src="Script/Main.js"></script>
 </body>
 </html>

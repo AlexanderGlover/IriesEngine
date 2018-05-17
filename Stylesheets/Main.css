@@ -3,6 +3,8 @@ Colour Pallette
 Green: #b4f875
 Purple: #ba75f8
 Blue: #75f5f8
+White: #FFFFFF
+Light Orange: #FFb347
 */
 
 ::-webkit-scrollbar {
@@ -36,7 +38,7 @@ div.pageHeader{
   padding: 0px;
   margin-top: 0px;
   text-align: right;
-  color: #75f5f8;
+  color: #FFb347;
 }
 
 div.mainBody{
@@ -51,7 +53,7 @@ div.roomTitle{
   height: 50px;
   padding:0px;
   margin:0px;
-  color: #75f5f8;
+  color: #FFb347;
 }
 
 div.textOutput{
@@ -82,7 +84,7 @@ body {
   background-color: black;
   padding: 0px;
   margin: 0px;
-  color: #ba75f8;
+  color: #FFFFFF;
 }
 
 p {
@@ -93,6 +95,10 @@ p {
 
 p1 {
   color: #b4f875;
+}
+
+p2 {
+  color: #FFb347;
 }
 
 h1 {
